@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="no-js">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>谭鑫培故居 · 京剧深度体验 | The Tan Xinpei Former Residence</title>
+<meta name="description" content="走进谭鑫培故居，在一方四合院里，看建筑、品香茶、听京剧——京城唯一的水上私享堂会，两小时九站沉浸。日场¥899/人·15人起；晚场¥1599/人（含北京特色晚餐与精品红酒两瓶）·12人起。" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Noto+Serif+SC:wght@300;400;500;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+<style>
+/* ============================================
+   TAO-Living · 谭鑫培故居京剧体验 · 产品页
+   品牌色板 — 与接待工服设计同源
+   ============================================ */
+:root {
+  --ink: #1A1A1A;          /* 玄黑 · 主文字 */
+  --slate: #3E4C55;        /* 黛青 · 深色块、标题 */
+  --vermilion: #AE3A2E;    /* 朱砂 · 京剧点睛、CTA */
+  --oat: #D8CDBC;          /* 燕麦 · 浅背景 */
+  --moon: #EAEDE8;         /* 月白 · 主背景 */
+  --tan: #8A6F54;          /* 檀棕 · 辅助 */
+  --gold: #B08A4A;         /* 铜金 · 暗纹细用 */
+  --line: #C9BFAE;         /* 燕麦加深 · 分割线 */
+
+  --serif-cn: "Noto Serif SC", "STSong", "宋体", serif;
+  --sans-cn: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --serif-en: "Cormorant Garamond", "Times New Roman", serif;
+  --sans-en: "Inter", "Helvetica Neue", Arial, sans-serif;
+
+  --max: 1200px;
+  --gutter: 32px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans-cn);
+  background: var(--moon);
+  color: var(--ink);
+  line-height: 1.7;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+/* ===== 顶部导航 ===== */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: 18px 40px;
+  display: flex; justify-content: space-between; align-items: center;
+  background: rgba(26, 26, 26, 0.42);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  color: var(--moon);
+  transition: background 0.4s, padding 0.4s;
+}
+.nav.scrolled { background: rgba(245, 243, 238, 0.94); color: var(--ink); box-shadow: 0 1px 0 var(--line); }
+.brand { display: flex; align-items: center; gap: 12px; }
+.brand-mark {
+  font-family: var(--serif-en); font-weight: 600; font-size: 18px; letter-spacing: 0.18em;
+  padding: 4px 10px; border: 1px solid currentColor;
+}
+.brand-name { font-family: var(--serif-cn); font-size: 16px; font-weight: 500; letter-spacing: 0.12em; }
+.nav-links { display: flex; gap: 32px; font-size: 14px; letter-spacing: 0.08em; }
+.nav-links a { position: relative; padding: 4px 0; transition: color 0.3s; }
+.nav-links a::after {
+  content: ""; position: absolute; left: 0; bottom: 0; width: 0; height: 1px; background: currentColor; transition: width 0.3s;
+}
+.nav-links a:hover::after { width: 100%; }
+.nav-cta {
+  padding: 8px 18px; font-size: 13px; letter-spacing: 0.1em;
+  background: var(--vermilion); color: var(--moon);
+  transition: all 0.3s;
+}
+.nav-cta:hover { background: var(--ink); }
+
+/* ===== Hero ===== */
+.hero {
+  position: relative; min-height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  text-align: center; color: var(--moon);
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute; inset: 0; z-index: 0;
+  background: url('./generated-images/Traditional_Chinese_siheyuan_c_2026-08-17T09-50-47.png') center/cover no-repeat;
+}
+.hero-bg::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.35) 50%, rgba(0,0,0,0.75) 100%);
+}
+.hero-inner { position: relative; z-index: 1; max-width: 920px; padding: 0 var(--gutter); }
+.hero-eyebrow {
+  font-family: var(--serif-en); font-size: 14px; letter-spacing: 0.4em;
+  text-transform: uppercase; margin-bottom: 28px; opacity: 0.85;
+}
+.hero-eyebrow span { display: inline-block; margin: 0 8px; }
+.hero-eyebrow .dot { width: 4px; height: 4px; background: var(--vermilion); border-radius: 50%; transform: translateY(-3px); }
+.hero-title-cn {
+  font-family: var(--serif-cn); font-weight: 500;
+  font-size: clamp(40px, 7vw, 84px); line-height: 1.15; letter-spacing: 0.16em;
+  margin-bottom: 14px;
+}
+.hero-title-cn .name { color: var(--vermilion); font-weight: 600; }
+.hero-title-cn .sep { color: var(--vermilion); margin: 0 4px; }
+.hero-title-en {
+  font-family: var(--serif-en); font-style: italic; font-weight: 400;
+  font-size: clamp(16px, 2vw, 22px); letter-spacing: 0.18em; opacity: 0.88;
+  margin-bottom: 56px;
+}
+.hero-quote {
+  font-family: var(--serif-cn); font-weight: 300;
+  font-size: clamp(15px, 1.5vw, 18px); line-height: 2; letter-spacing: 0.12em;
+  max-width: 720px; margin: 0 auto 48px;
+  padding: 0 24px; opacity: 0.92;
+}
+.hero-quote .q { color: var(--vermilion); font-size: 1.2em; }
+.hero-quote-en {
+  font-family: var(--serif-en); font-style: italic; font-size: 15px;
+  letter-spacing: 0.05em; opacity: 0.7; max-width: 660px; margin: -32px auto 48px;
+  line-height: 1.6;
+}
+.hero-meta {
+  display: inline-flex; flex-wrap: wrap; justify-content: center; gap: 0;
+  border: 1px solid rgba(234, 237, 232, 0.4);
+  margin-bottom: 40px;
+}
+.hero-meta > div {
+  padding: 14px 28px; font-size: 13px; letter-spacing: 0.12em;
+  display: flex; align-items: baseline; gap: 8px;
+}
+.hero-meta > div + div { border-left: 1px solid rgba(234, 237, 232, 0.3); }
+.hero-meta .num { font-family: var(--serif-en); font-size: 22px; font-weight: 500; color: var(--vermilion); }
+.hero-cta { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.btn {
+  padding: 14px 36px; font-size: 14px; letter-spacing: 0.18em;
+  font-family: var(--sans-cn); font-weight: 500;
+  transition: all 0.35s; display: inline-flex; align-items: center; gap: 10px;
+}
+.btn-primary { background: var(--vermilion); color: var(--moon); }
+.btn-primary:hover { background: var(--ink); transform: translateY(-2px); }
+.btn-ghost { border: 1px solid var(--moon); color: var(--moon); }
+.btn-ghost:hover { background: var(--moon); color: var(--ink); }
+.hero-scroll {
+  position: absolute; left: 50%; bottom: 32px; transform: translateX(-50%);
+  font-family: var(--serif-en); font-size: 11px; letter-spacing: 0.4em;
+  text-transform: uppercase; opacity: 0.7;
+  display: flex; flex-direction: column; align-items: center; gap: 12px;
+}
+.hero-scroll::after {
+  content: ""; width: 1px; height: 36px; background: var(--moon);
+  animation: scrollLine 2s infinite;
+}
+@keyframes scrollLine {
+  0% { transform: scaleY(0); transform-origin: top; }
+  50% { transform: scaleY(1); transform-origin: top; }
+  51% { transform: scaleY(1); transform-origin: bottom; }
+  100% { transform: scaleY(0); transform-origin: bottom; }
+}
+
+/* ===== 通用 Section ===== */
+section { padding: 120px var(--gutter); position: relative; }
+.section-eyebrow {
+  font-family: var(--serif-en); font-size: 12px; letter-spacing: 0.4em;
+  text-transform: uppercase; color: var(--vermilion); margin-bottom: 16px;
+  text-align: center;
+}
+.section-title {
+  font-family: var(--serif-cn); font-weight: 500;
+  font-size: clamp(28px, 3.5vw, 44px); letter-spacing: 0.16em; line-height: 1.4;
+  text-align: center; margin-bottom: 16px; color: var(--ink);
+}
+.section-title-en {
+  font-family: var(--serif-en); font-style: italic; font-size: 18px; color: var(--tan);
+  text-align: center; margin-bottom: 56px; letter-spacing: 0.1em;
+}
+.container { max-width: var(--max); margin: 0 auto; }
+
+/* ===== 三唯一 ===== */
+.uniqueness { background: var(--moon); }
+.uniqueness-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+.uni-card {
+  background: var(--moon);
+  padding: 56px 40px; text-align: center;
+  transition: background 0.4s;
+  position: relative; overflow: hidden;
+}
+.uni-card:hover { background: #fff; }
+.uni-card:hover .uni-img { transform: scale(1.06); }
+.uni-img-wrap {
+  width: 100%; aspect-ratio: 4/3; overflow: hidden; margin-bottom: 32px;
+  border: 1px solid var(--line);
+}
+.uni-img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease; }
+.uni-num {
+  font-family: var(--serif-en); font-size: 56px; font-weight: 400; color: var(--vermilion);
+  line-height: 1; margin-bottom: 12px; letter-spacing: 0.04em;
+}
+.uni-num small { font-size: 18px; vertical-align: top; }
+.uni-tag {
+  font-family: var(--serif-cn); font-weight: 600;
+  font-size: 22px; letter-spacing: 0.12em; margin-bottom: 6px;
+}
+.uni-tag-en {
+  font-family: var(--serif-en); font-style: italic; font-size: 14px;
+  color: var(--tan); letter-spacing: 0.1em; margin-bottom: 24px;
+}
+.uni-desc {
+  font-size: 15px; line-height: 1.95; color: #4A4A4A; letter-spacing: 0.04em;
+  max-width: 320px; margin: 0 auto;
+}
+
+/* ===== 九站动线 Timeline ===== */
+.journey { background: var(--ink); color: var(--moon); }
+.journey .section-title { color: var(--moon); }
+.journey .section-title-en { color: var(--oat); }
+.journey-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+}
+.journey-img-wrap {
+  position: sticky; top: 80px;
+  aspect-ratio: 3/4; overflow: hidden; border: 1px solid rgba(234, 237, 232, 0.15);
+}
+.journey-img { width: 100%; height: 100%; object-fit: cover; }
+.timeline { position: relative; padding-left: 40px; }
+.timeline::before {
+  content: ""; position: absolute; left: 8px; top: 8px; bottom: 8px;
+  width: 1px; background: linear-gradient(180deg, transparent, var(--vermilion) 12%, var(--vermilion) 88%, transparent);
+}
+.t-step {
+  position: relative; padding: 24px 0 24px 0; border-bottom: 1px dashed rgba(234,237,232,0.12);
+  cursor: pointer; transition: padding 0.3s;
+}
+.t-step:last-child { border-bottom: none; }
+.t-step::before {
+  content: ""; position: absolute; left: -38px; top: 36px;
+  width: 17px; height: 17px; border-radius: 50%;
+  border: 1px solid var(--vermilion); background: var(--ink);
+  transition: all 0.3s;
+}
+.t-step:hover::before { background: var(--vermilion); box-shadow: 0 0 0 6px rgba(174,58,46,0.18); }
+.t-step.active::before { background: var(--vermilion); box-shadow: 0 0 0 6px rgba(174,58,46,0.25); }
+.t-step-num {
+  font-family: var(--serif-en); font-size: 13px; color: var(--vermilion);
+  letter-spacing: 0.2em; margin-bottom: 4px;
+}
+.t-step-title {
+  font-family: var(--serif-cn); font-size: 22px; font-weight: 500;
+  letter-spacing: 0.08em; margin-bottom: 6px;
+}
+.t-step-title small { font-size: 14px; color: var(--oat); margin-left: 12px; font-weight: 300; }
+.t-step-desc { font-size: 14px; line-height: 1.8; color: var(--oat); opacity: 0.85; max-width: 520px; }
+
+/* ===== 30分钟微演出 ===== */
+.program { background: var(--oat); }
+.program-grid {
+  display: grid; grid-template-columns: repeat(5, 1fr); gap: 24px;
+}
+.prog-card {
+  background: #fff; padding: 32px 24px 28px;
+  position: relative; transition: all 0.4s; border: 1px solid transparent;
+  display: flex; flex-direction: column; min-height: 360px;
+}
+.prog-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px -20px rgba(62,76,85,0.3); border-color: var(--vermilion); }
+.prog-num {
+  font-family: var(--serif-en); font-size: 48px; font-weight: 400; color: var(--vermilion);
+  line-height: 1; margin-bottom: 8px;
+}
+.prog-role {
+  font-family: var(--serif-en); font-size: 11px; letter-spacing: 0.3em; color: var(--tan);
+  text-transform: uppercase; margin-bottom: 18px;
+}
+.prog-title {
+  font-family: var(--serif-cn); font-size: 19px; font-weight: 600;
+  letter-spacing: 0.06em; margin-bottom: 8px; color: var(--ink);
+}
+.prog-title-en { font-family: var(--serif-en); font-style: italic; font-size: 13px; color: var(--tan); margin-bottom: 16px; }
+.prog-divider { width: 24px; height: 1px; background: var(--vermilion); margin-bottom: 16px; }
+.prog-desc { font-size: 13.5px; line-height: 1.85; color: #4A4A4A; flex-grow: 1; }
+.prog-time {
+  font-family: var(--serif-en); font-size: 12px; color: var(--vermilion);
+  letter-spacing: 0.2em; margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--line);
+}
+
+/* ===== Stats ===== */
+.stats { background: var(--slate); color: var(--moon); padding: 80px var(--gutter); }
+.stats-grid {
+  display: grid; grid-template-columns: repeat(6, 1fr); gap: 1px;
+  background: rgba(234, 237, 232, 0.18); border: 1px solid rgba(234, 237, 232, 0.18);
+}
+.stat {
+  background: var(--slate); padding: 40px 20px; text-align: center;
+  transition: background 0.3s;
+}
+.stat:hover { background: #34404a; }
+.stat-num {
+  font-family: var(--serif-en); font-size: 56px; font-weight: 400; color: var(--vermilion);
+  line-height: 1; margin-bottom: 8px;
+}
+.stat-num small { font-size: 22px; vertical-align: top; }
+.stat-label {
+  font-family: var(--serif-cn); font-size: 14px; letter-spacing: 0.2em;
+  color: var(--oat);
+}
+
+/* ===== 价格场次 ===== */
+.pricing { background: var(--moon); }
+.pricing-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 32px; max-width: 980px; margin: 0 auto;
+}
+.price-card {
+  background: #fff; padding: 48px 44px; border: 1px solid var(--line);
+  position: relative; transition: all 0.4s;
+}
+.price-card:hover { border-color: var(--vermilion); transform: translateY(-4px); box-shadow: 0 30px 60px -30px rgba(62,76,85,0.25); }
+.price-card.featured { background: var(--ink); color: var(--moon); border-color: var(--ink); }
+.price-card.featured .price-feat { color: var(--oat); }
+.price-tag {
+  position: absolute; top: 24px; right: 24px;
+  background: var(--vermilion); color: var(--moon);
+  font-size: 11px; letter-spacing: 0.2em; padding: 4px 12px;
+  font-family: var(--serif-en); text-transform: uppercase;
+}
+.price-name { font-family: var(--serif-cn); font-size: 24px; font-weight: 500; letter-spacing: 0.1em; margin-bottom: 6px; }
+.price-name-en { font-family: var(--serif-en); font-style: italic; font-size: 14px; color: var(--tan); margin-bottom: 32px; letter-spacing: 0.1em; }
+.price-card.featured .price-name-en { color: var(--oat); }
+.price-amount { display: flex; align-items: baseline; gap: 8px; margin-bottom: 8px; }
+.price-currency { font-family: var(--serif-en); font-size: 22px; color: var(--vermilion); }
+.price-number { font-family: var(--serif-en); font-size: 64px; font-weight: 500; color: var(--ink); line-height: 1; }
+.price-card.featured .price-number { color: var(--moon); }
+.price-per { font-size: 14px; color: var(--tan); margin-bottom: 32px; }
+.price-card.featured .price-per { color: var(--oat); }
+.price-min {
+  font-family: var(--serif-cn); font-size: 13px; letter-spacing: 0.18em;
+  color: var(--vermilion); margin: -18px 0 8px; padding-bottom: 10px;
+  border-bottom: 1px solid rgba(174, 58, 46, 0.35); display: inline-block;
+}
+.price-card.featured .price-min { color: var(--vermilion); border-bottom-color: rgba(174,58,46,0.6); }
+.price-feat { list-style: none; }
+.price-feat li {
+  padding: 10px 0; padding-left: 24px; position: relative;
+  font-size: 14px; line-height: 1.7; border-bottom: 1px solid rgba(201, 191, 174, 0.4);
+}
+.price-feat li:last-child { border-bottom: none; }
+.price-feat li::before {
+  content: "✦"; position: absolute; left: 0; top: 10px; color: var(--vermilion); font-size: 12px;
+}
+.price-book {
+  display: block; width: 100%; margin-top: 32px; padding: 14px;
+  text-align: center; font-size: 14px; letter-spacing: 0.2em;
+  background: var(--vermilion); color: var(--moon);
+  transition: all 0.3s;
+}
+.price-book:hover { background: var(--ink); }
+.price-card.featured .price-book { background: var(--vermilion); }
+
+/* ===== 品牌Footer ===== */
+.footer { background: var(--ink); color: var(--moon); padding: 100px var(--gutter) 40px; }
+.footer-inner { max-width: var(--max); margin: 0 auto; }
+.footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 60px; margin-bottom: 80px; }
+.footer-brand .brand-mark { color: var(--moon); }
+.footer-brand .brand-name { color: var(--moon); margin-top: 16px; }
+.footer-slogan {
+  font-family: var(--serif-cn); font-weight: 300; font-size: 16px; line-height: 1.9;
+  margin-top: 24px; max-width: 380px; color: var(--oat); letter-spacing: 0.06em;
+}
+.footer-slogan-en {
+  font-family: var(--serif-en); font-style: italic; font-size: 14px; color: var(--tan);
+  margin-top: 12px; letter-spacing: 0.08em; line-height: 1.6;
+}
+.footer-h4 {
+  font-family: var(--serif-cn); font-weight: 500; font-size: 14px; letter-spacing: 0.2em;
+  margin-bottom: 24px; color: var(--vermilion);
+}
+.footer-list { list-style: none; font-size: 14px; line-height: 2.2; color: var(--oat); }
+.footer-list a { transition: color 0.3s; }
+.footer-list a:hover { color: var(--vermilion); }
+.footer-bottom {
+  border-top: 1px solid rgba(234, 237, 232, 0.12);
+  padding-top: 32px;
+  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;
+  font-size: 12px; color: var(--tan); letter-spacing: 0.1em;
+}
+.footer-social { display: flex; gap: 20px; }
+.footer-social a {
+  width: 36px; height: 36px; border: 1px solid rgba(234, 237, 232, 0.3);
+  display: inline-flex; align-items: center; justify-content: center;
+  font-family: var(--serif-en); font-size: 13px;
+  transition: all 0.3s;
+}
+.footer-social a:hover { background: var(--vermilion); border-color: var(--vermilion); }
+
+/* ===== 浮层 Lightbox ===== */
+.lightbox {
+  position: fixed; inset: 0; z-index: 9999;
+  background: rgba(0,0,0,0.92);
+  display: none; align-items: center; justify-content: center;
+  padding: 40px;
+}
+.lightbox.open { display: flex; }
+.lightbox img { max-width: 90vw; max-height: 90vh; object-fit: contain; }
+.lightbox-close {
+  position: absolute; top: 24px; right: 32px; color: var(--moon);
+  font-family: var(--serif-en); font-size: 32px; cursor: pointer; line-height: 1;
+}
+
+/* ===== 入场动画 ===== */
+.reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.8s, transform 0.8s; }
+.reveal.in, .no-js .reveal { opacity: 1; transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+@media print {
+  .reveal { opacity: 1 !important; transform: none !important; }
+  .nav { position: static; background: var(--ink); }
+  .hero-bg { position: static; }
+}
+
+/* ===== 响应式 ===== */
+@media (max-width: 960px) {
+  :root { --gutter: 20px; }
+  .nav { padding: 14px 20px; }
+  .nav-links { display: none; }
+  section { padding: 80px var(--gutter); }
+  .uniqueness-grid, .journey-grid, .pricing-grid, .footer-top { grid-template-columns: 1fr; gap: 24px; }
+  .program-grid { grid-template-columns: 1fr 1fr; }
+  .stats-grid { grid-template-columns: 1fr 1fr 1fr; }
+  .journey-img-wrap { position: relative; top: 0; aspect-ratio: 4/3; }
+  .hero-meta { flex-wrap: wrap; }
+  .hero-meta > div { padding: 10px 16px; font-size: 12px; }
+  .hero-meta > div + div { border-left: none; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== 导航 ===== -->
+<nav class="nav" id="nav">
+  <div class="brand">
+    <span class="brand-mark">TAO</span>
+    <span class="brand-name">道生活</span>
+  </div>
+  <div class="nav-links">
+    <a href="#uniqueness">品牌故事</a>
+    <a href="#journey">体验动线</a>
+    <a href="#program">微演出</a>
+    <a href="#pricing">价格场次</a>
+    <a href="#contact">联系我们</a>
+  </div>
+  <a href="#contact" class="nav-cta">渠道合作</a>
+</nav>
+
+<!-- ===== Hero ===== -->
+<header class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow">
+      <span>BEIJING</span><span class="dot"></span><span>CHENG</span><span class="dot"></span><span>SIHEYUAN</span>
+    </div>
+    <h1 class="hero-title-cn">
+      <span class="name">谭鑫培</span><span class="sep">·</span>故居<br/>
+      京剧深度体验
+    </h1>
+    <div class="hero-title-en">The Tan Xinpei Former Residence · Peking Opera Cultural Experience</div>
+    <p class="hero-quote">
+      <span class="q">「</span>走进谭鑫培故居，在一方四合院里，看建筑、品香茶、听京剧，感受老北京的生活与堂会文化<span class="q">」</span>
+    </p>
+    <p class="hero-quote-en">Step inside the historic courtyard home of Tan Xinpei — where architecture, tea, and live Peking opera unfold as one continuous ritual of old Beijing.</p>
+    <div class="hero-meta">
+      <div><span class="num">16</span>人私享</div>
+      <div><span class="num">2</span>小时</div>
+      <div><span class="num">9</span>站沉浸</div>
+      <div><span class="num">¥899起</span>/人</div>
+    </div>
+    <div class="hero-cta">
+      <a href="#pricing" class="btn btn-primary">立即预订 →</a>
+      <a href="#contact" class="btn btn-ghost">渠道合作</a>
+    </div>
+  </div>
+  <div class="hero-scroll">SCROLL</div>
+</header>
+
+<!-- ===== 三唯一 ===== -->
+<section class="uniqueness" id="uniqueness">
+  <div class="container">
+    <div class="section-eyebrow reveal">Why Unrepeatable</div>
+    <h2 class="section-title reveal">三 个 唯 一</h2>
+    <p class="section-title-en reveal">The Threefold Uniqueness</p>
+    <div class="uniqueness-grid reveal">
+      <div class="uni-card">
+        <div class="uni-img-wrap"><img class="uni-img" src="./generated-images/Traditional_Chinese_siheyuan_c_2026-08-17T09-50-47.png" alt="唯一真迹" /></div>
+        <div class="uni-num">01</div>
+        <div class="uni-tag">唯 一 真 迹</div>
+        <div class="uni-tag-en">The Only Authentic Site</div>
+        <p class="uni-desc">西城区级文物保护单位（2009）。这里，是"伶界大王"谭鑫培的旧居所在——一方灰瓦朱门、门钉九九八十一颗的院落，全京城仅此一座。</p>
+      </div>
+      <div class="uni-card">
+        <div class="uni-img-wrap"><img class="uni-img" src="./谭鑫培_定军山_唯一存世剧照_1905.png" alt="唯一影史" /></div>
+        <div class="uni-num">02</div>
+        <div class="uni-tag">唯 一 影 史</div>
+        <div class="uni-tag-en">The Origin of Chinese Cinema</div>
+        <p class="uni-desc">1905 年，谭鑫培在丰泰照相馆主演《定军山》——这是中国第一部电影，也是世界电影史上第一部长片京剧影像。我们请客人看这张唯一存世的剧照。</p>
+      </div>
+      <div class="uni-card">
+        <div class="uni-img-wrap"><img class="uni-img" src="./generated-images/Ancient_Chinese_opera_stage_ab_2026-08-17T09-50-47.png" alt="唯一实景" /></div>
+        <div class="uni-num">03</div>
+        <div class="uni-tag">唯 一 实 景</div>
+        <div class="uni-tag-en">The Only Water Stage in Town</div>
+        <p class="uni-desc">北京城内唯一一座"水上私享堂会"——荷花池畔的戏台、雾起、灯亮，十六位客人在水一方的位置，看一出戏，做一场旧梦。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 九站动线 ===== -->
+<section class="journey" id="journey">
+  <div class="container">
+    <div class="section-eyebrow reveal">A 120-Minute Immersive Journey</div>
+    <h2 class="section-title reveal">两 小 时 · 九 站 动 线</h2>
+    <p class="section-title-en reveal">Nine Stops · One Continuous Story</p>
+    <div class="journey-grid">
+      <div class="journey-img-wrap reveal">
+        <img class="journey-img" id="journeyImg" src="./generated-images/Traditional_Chinese_siheyuan_c_2026-08-17T09-50-47.png" alt="动线" />
+      </div>
+      <div class="timeline reveal" id="timeline">
+        <div class="t-step active" data-img="./generated-images/导览员迎宾_开院门请进_2026-09-02.png">
+          <div class="t-step-num">STOP 01 · 0'</div>
+          <div class="t-step-title">启 · 迎宾 <small>Welcome</small></div>
+          <div class="t-step-desc">推开故居黑漆木门，导赏师呈上盖碗热茶与一封"堂会帖"。十六位客人在影壁前合影留念，堂会序幕由此拉开。</div>
+        </div>
+        <div class="t-step" data-img="./generated-images/Traditional_Chinese_siheyuan_c_2026-08-17T09-50-47.png">
+          <div class="t-step-num">STOP 02 · 8'</div>
+          <div class="t-step-title">阅 · 院落导览 <small>Courtyard Tour</small></div>
+          <div class="t-step-desc">沿中轴穿过影壁、正房、垂花门——讲清广亮大门的礼制、门钉九九八十一颗的等级、谭鑫培何以配享这座规格与"伶界大王"门匾。</div>
+        </div>
+        <div class="t-step" data-img="./generated-images/Half_face_Peking_Opera_mask_sp_2026-08-17T09-51-46.png">
+          <div class="t-step-num">STOP 03 · 18'</div>
+          <div class="t-step-title">观 · 画脸 <small>Watching Opera Face-Painting</small></div>
+          <div class="t-step-desc">演员在侧厅当场"勾脸"——一笔朱砂定忠奸，一抹靛蓝描神鬼。客人围站近观，看红脸关公、白脸曹操如何一笔一画被"请上脸"。</div>
+        </div>
+        <div class="t-step" data-img="./generated-images/Vintage_sepia_photograph_circa_2026-08-17T09-50-57.png">
+          <div class="t-step-num">STOP 04 · 28'</div>
+          <div class="t-step-title">品 · 香茶 <small>Tea Ritual</small></div>
+          <div class="t-step-desc">正房落座品老北京盖碗茶，导赏师穿插讲述"老生三鼎甲"与谭家七代人的梨园传奇。1905年《定军山》剧照一并在侧——茶与史,在此交汇。</div>
+        </div>
+        <div class="t-step" data-img="./generated-images/Black_silhouettes_of_four_Peki_2026-08-17T09-51-46.png">
+          <div class="t-step-num">STOP 05 · 45' – 75'</div>
+          <div class="t-step-title">听 · 京韵 <small>30-Min Micro-Performance</small></div>
+          <div class="t-step-desc">移步水上戏台，三十分钟三出折子戏：锣鼓开场→《定军山》谭门本戏→《拾玉镯》花旦哑剧→《霸王别姬》剑舞——杨小楼是谭鑫培义子，故事在此闭环。</div>
+        </div>
+        <div class="t-step" data-img="./generated-images/Close_up_of_an_ornate_Chinese__2026-08-17T09-51-46.png">
+          <div class="t-step-num">STOP 06 · 80'</div>
+          <div class="t-step-title">赏 · 京绣 <small>Beijing Embroidery</small></div>
+          <div class="t-step-desc">京绣师傅现场演示劈丝分线、盘金绣——一寸丝线劈成十六股，戏服上的龙凤云水皆由这一针一线绣出。客人可上手体验盘金走针。</div>
+        </div>
+        <div class="t-step" data-img="./generated-images/Early_20th_century_sepia_famil_2026-08-17T09-50-47.png">
+          <div class="t-step-num">STOP 07 · 95'</div>
+          <div class="t-step-title">闻 · 香道 <small>Incense Ceremony</small></div>
+          <div class="t-step-desc">回到院中静隅,一缕沉香升起,导赏师讲宋元以来文人焚香的雅道——檀香沉水,一呼一吸间,把堂会的喧腾收束为片刻的静。</div>
+        </div>
+        <div class="t-step" data-img="./generated-images/Artisan_hands_shaping_a_colorf_2026-08-17T09-51-46.png">
+          <div class="t-step-num">STOP 08 · 105'</div>
+          <div class="t-step-title">选 · 文创 <small>Curated Goods</small></div>
+          <div class="t-step-desc">京绣团扇、戏服微缩、谭门手书复刻、京剧脸谱挂件——50 元小件到万元红木家具备齐。贵格格统一收银,合作货源方直供。</div>
+        </div>
+        <div class="t-step" data-img="./generated-images/Close_up_of_white_silk_Peking__2026-08-17T09-51-46.png">
+          <div class="t-step-num">STOP 09 · 115'</div>
+          <div class="t-step-title">别 · 京剧换装合影 <small>Costume & Farewell Portrait</small></div>
+          <div class="t-step-desc">最后一站,客人披上戏服、戴好髯口或点翠头面,在院门牌匾前定格——导赏师按下快门,一帧穿在身上、带得走的中国。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 30分钟微演出 ===== -->
+<section class="program" id="program">
+  <div class="container">
+    <div class="section-eyebrow reveal">A 30-Minute Peking Opera Tasting</div>
+    <h2 class="section-title reveal">三 十 分 钟 · 一 出 戏</h2>
+    <p class="section-title-en reveal">Three Excerpts · One Complete Arc</p>
+    <div class="program-grid reveal">
+      <div class="prog-card">
+        <div class="prog-num">01</div>
+        <div class="prog-role">Percussion</div>
+        <div class="prog-title">锣 鼓 开 场</div>
+        <div class="prog-title-en">Drum & Gong Opening</div>
+        <div class="prog-divider"></div>
+        <div class="prog-desc">板鼓领奏、京锣绕梁——"急急风"三通鼓毕，水上戏台雾起，演员整装出场，京胡起弦。</div>
+        <div class="prog-time">≈ 3 MIN</div>
+      </div>
+      <div class="prog-card">
+        <div class="prog-num">02</div>
+        <div class="prog-role">Lao Sheng · Elder Statesman</div>
+        <div class="prog-title">《定军山》· 谭门本戏</div>
+        <div class="prog-title-en">The Battle of Dingjunshan · Tan's Signature Role</div>
+        <div class="prog-divider"></div>
+        <div class="prog-desc">谭鑫培的看家戏，也是1905年中国第一部电影——"这一封书信来得巧"西皮流水响起，白髯老将横刀立马。故居唱本家戏，人、戏、地三重闭环。</div>
+        <div class="prog-time">≈ 9 MIN</div>
+      </div>
+      <div class="prog-card">
+        <div class="prog-num">03</div>
+        <div class="prog-role">Hua Dan · Vivacious Female</div>
+        <div class="prog-title">《拾玉镯》· 哑剧花旦</div>
+        <div class="prog-title-en">Picking Up the Jade Bracelet · Silent Hua Dan</div>
+        <div class="prog-divider"></div>
+        <div class="prog-desc">未出半字，已动全席——绣花、喂鸡、试镯，演尽少女春心，多语言客人皆能看笑。</div>
+        <div class="prog-time">≈ 8 MIN</div>
+      </div>
+      <div class="prog-card">
+        <div class="prog-num">04</div>
+        <div class="prog-role">Dan · Female Lead</div>
+        <div class="prog-title">《霸王别姬》· 剑舞</div>
+        <div class="prog-title-en">Farewell My Concubine · Sword Dance</div>
+        <div class="prog-divider"></div>
+        <div class="prog-desc">梅兰芳与杨小楼（谭鑫培义子）的绝世合作——虞姬身段剑花，从慢板到快剑，水袖翻飞与青锋共舞，霸王悲歌在水一方响起。</div>
+        <div class="prog-time">≈ 8 MIN</div>
+      </div>
+      <div class="prog-card">
+        <div class="prog-num">05</div>
+        <div class="prog-role">Curtain Call</div>
+        <div class="prog-title">谢 幕 合 影</div>
+        <div class="prog-title-en">Curtain Call & Photo</div>
+        <div class="prog-divider"></div>
+        <div class="prog-desc">演员同台谢幕，拱手礼"台下贵客，堂会礼成"——客人持水台前合影留念。</div>
+        <div class="prog-time">≈ 2 MIN</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 小数据 ===== -->
+<section class="stats">
+  <div class="container">
+    <div class="stats-grid reveal">
+      <div class="stat">
+        <div class="stat-num">16<small>人</small></div>
+        <div class="stat-label">私 享 成 席</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">2<small>h</small></div>
+        <div class="stat-label">全 流 程</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">9</div>
+        <div class="stat-label">站 沉 浸</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">4<small>段</small></div>
+        <div class="stat-label">微 演 出</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">1</div>
+        <div class="stat-label">座 水 上 戏 台</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">¥899起</div>
+        <div class="stat-label">日 场 人 均</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 价格场次 ===== -->
+<section class="pricing" id="pricing">
+  <div class="container">
+    <div class="section-eyebrow reveal">Schedule & Pricing</div>
+    <h2 class="section-title reveal">价 格 · 场 次</h2>
+    <p class="section-title-en reveal">Choose Your Time · Choose Your Depth</p>
+    <div class="pricing-grid reveal">
+      <div class="price-card">
+        <div class="price-name">静 日 场</div>
+        <div class="price-name-en">Day Session · 14:00–16:00 · 15+ guests</div>
+        <div class="price-amount">
+          <span class="price-currency">¥</span>
+          <span class="price-number">899</span>
+          <span class="price-per">/ 人 · CNY</span>
+        </div>
+        <div class="price-amount" style="margin-bottom: 32px;">
+          <span class="price-currency">$</span>
+          <span class="price-number" style="font-size: 36px;">128</span>
+          <span class="price-per">/ 人 · USD</span>
+        </div>
+        <div class="price-min">15 人起订 · 团体私享</div>
+        <ul class="price-feat">
+          <li>2 小时全流程体验</li>
+          <li>多语言讲解（中/英/法/日）</li>
+          <li>老北京盖碗茶 + 茶点</li>
+          <li>30 分钟·三出折子戏（定军山/拾玉镯/霸王别姬）</li>
+          <li>脸谱彩绘 / 榫卯拼装</li>
+          <li>谢幕合影电子版（次日出）</li>
+        </ul>
+        <a href="#contact" class="price-book">预订日场</a>
+      </div>
+      <div class="price-card featured">
+        <div class="price-tag">Most Popular</div>
+        <div class="price-name">黄 金 晚 场</div>
+        <div class="price-name-en">Golden Hour · 19:00–21:00 · 12+ guests</div>
+        <div class="price-amount">
+          <span class="price-currency">¥</span>
+          <span class="price-number">1599</span>
+          <span class="price-per">/ 人 · CNY</span>
+        </div>
+        <div class="price-amount" style="margin-bottom: 32px;">
+          <span class="price-currency">$</span>
+          <span class="price-number" style="font-size: 36px;">229</span>
+          <span class="price-per">/ 人 · USD</span>
+        </div>
+        <div class="price-min">12 人起订 · 含晚餐与精品红酒两瓶</div>
+        <ul class="price-feat">
+          <li>夕阳收 · 红灯亮 · 雾起时的开演——京城唯一夜场氛围</li>
+          <li>含日场全部体验内容</li>
+          <li>北京特色晚餐（老北京风味 · 围桌而食）</li>
+          <li>精品红酒两瓶（每场）</li>
+          <li>赠：京绣团扇小件 + 戏服体验精修照 1 张</li>
+          <li>适合外交礼宾、商务接待、海外高端团</li>
+        </ul>
+        <a href="#contact" class="price-book">预订黄金晚场</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer class="footer" id="contact">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="brand">
+          <span class="brand-mark">TAO</span>
+          <span class="brand-name">道 生 活</span>
+        </div>
+        <p class="footer-slogan">四合院里的中国道生活——<br/>我们用一方院子，把"堂会"还给世界。</p>
+        <p class="footer-slogan-en">Living the Chinese Way, in a Siheyuan. We give back the world the lost ritual of a private courtyard performance.</p>
+      </div>
+      <div>
+        <div class="footer-h4">体 验</div>
+        <ul class="footer-list">
+          <li><a href="#uniqueness">三 个 唯 一</a></li>
+          <li><a href="#journey">九 站 动 线</a></li>
+          <li><a href="#program">三 十 分 钟 戏</a></li>
+          <li><a href="#pricing">价 格 场 次</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-h4">合 作</div>
+        <ul class="footer-list">
+          <li><a href="#">渠 道 代 理</a></li>
+          <li><a href="#">企 业 包 场</a></li>
+          <li><a href="#">媒 体 拍 摄</a></li>
+          <li><a href="#">演 员 经 纪</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-h4">联 系</div>
+        <ul class="footer-list">
+          <li>北 京 · 西 城 区</li>
+          <li>大 外 廊 营 胡 同</li>
+          <li>谭 鑫 培 故 居</li>
+          <li>hello@tao-living.com</li>
+          <li>+86 138 0000 0000</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 TAO-Living · 北京贵格格文化创意有限公司 · 京 ICP 备 0000 0000 号</div>
+      <div class="footer-social">
+        <a href="#" title="WeChat">微</a>
+        <a href="#" title="Weibo">博</a>
+        <a href="#" title="Instagram">IG</a>
+        <a href="#" title="Xiaohongshu">小</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== Lightbox ===== -->
+<div class="lightbox" id="lightbox" onclick="this.classList.remove('open')">
+  <span class="lightbox-close">×</span>
+  <img id="lightboxImg" src="" alt="" />
+</div>
+
+<script>
+// 移除 no-js class（证明 JS 生效），但仍保留 reveal 动画
+document.documentElement.classList.remove('no-js');
+
+// 滚动渐入 + 兜底：JS 加载失败/不滚动/打印场景下也能完整显示
+const reveals = document.querySelectorAll('.reveal');
+if ('IntersectionObserver' in window) {
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.01, rootMargin: '0px 0px 200px 0px' });
+  reveals.forEach(el => io.observe(el));
+} else {
+  reveals.forEach(el => el.classList.add('in'));
+}
+// 兜底：1.5s 后仍未触发的元素强制显示（用于PDF打印、Headless、辅助技术等）
+setTimeout(() => reveals.forEach(el => el.classList.add('in')), 1500);
+
+// 导航栏滚动
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 80) nav.classList.add('scrolled');
+  else nav.classList.remove('scrolled');
+}, { passive: true });
+
+// 九站动线 hover 切换大图
+const journeyImg = document.getElementById('journeyImg');
+const steps = document.querySelectorAll('.t-step');
+steps.forEach(s => {
+  s.addEventListener('mouseenter', () => {
+    steps.forEach(o => o.classList.remove('active'));
+    s.classList.add('active');
+    const newSrc = s.dataset.img;
+    if (newSrc && newSrc !== journeyImg.src) {
+      journeyImg.style.opacity = '0.4';
+      setTimeout(() => { journeyImg.src = newSrc; journeyImg.style.opacity = '1'; }, 220);
+    }
+  });
+});
+if (journeyImg) journeyImg.style.transition = 'opacity 0.4s';
+
+// 图片点击放大
+document.querySelectorAll('img').forEach(img => {
+  img.style.cursor = 'zoom-in';
+  img.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const lb = document.getElementById('lightbox');
+    document.getElementById('lightboxImg').src = img.src;
+    lb.classList.add('open');
+  });
+});
+</script>
+</body>
+</html>
